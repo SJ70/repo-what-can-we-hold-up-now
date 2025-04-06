@@ -1,0 +1,37 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.info-viewer {
+  width: min(100vw, 40em);
+  height: min(100vh, 40em);
+  background-color: var(--navy);
+  color: var(--white);
+  position: relative;
+  padding: .5em 1.5em .5em 1.5em;
+  white-space: normal;
+  word-break: break-word;
+  overflow: auto;
+}
+
+.info-viewer > button {
+  position: absolute;
+  top: .75em;
+  right: .75em;
+}
+
+
+@media (max-width: 600px) {
+
+  .info-viewer {
+    width: calc(100vw - 5em);
+    height: calc(100vh - 10em);
+  }
+
+}

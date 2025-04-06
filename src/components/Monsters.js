@@ -22,7 +22,7 @@ function Monsters() {
         <label> 들 수 있는 몬스터 수 : </label>
         <span> {monsters.length} </span>
       </div>
-      <div className='monsters-list list'>
+      <div className='monsters-list scroll'>
         {monsters.map((monster, idx) => (
           <div className='monster' key={idx}>
             <img src={monster.img} alt={monster.name} width={64} height={64} />

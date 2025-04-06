@@ -18,7 +18,7 @@ function Players() {
         </button>
       </div>
 
-      <div className='players-list list'>
+      <div className='players-list scroll'>
         {players.map((player, idx) => (
           <Player key={idx} player={player} idx={idx} />
         ))}

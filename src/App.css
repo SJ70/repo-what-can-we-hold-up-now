@@ -45,6 +45,10 @@ button {
   }
 }
 
+a {
+  color: var(--orange);
+}
+
 * {
   user-select: none;
 }
@@ -71,21 +75,21 @@ body {
   padding-bottom: 1em;
 }
 
-.list {
+.scroll {
   overflow-y: auto;
 }
-.list::-webkit-scrollbar {
+.scroll::-webkit-scrollbar {
   width: .5em;
 }
-.list::-webkit-scrollbar-track {
+.scroll::-webkit-scrollbar-track {
   background: var(--dark-grey);
 }
-.list::-webkit-scrollbar-thumb {
+.scroll::-webkit-scrollbar-thumb {
   background: var(--grey);
   border-radius: 0;
 }
 @media (hover: hover) and (pointer: fine) {
-  .list::-webkit-scrollbar-thumb:hover {
+  .scroll::-webkit-scrollbar-thumb:hover {
     background: var(--orange);
   }
 }
