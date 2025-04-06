@@ -13,7 +13,7 @@ const PlayerImage = ({ player, width = 200, height = 200 }) => {
 
     img.onload = () => {
       const canvas = canvasRef.current;
-      const ctx = canvas.getContext('2d');
+      const ctx = canvas.getContext('2d', { willReadFrequently: true });
 
       ctx.clearRect(0, 0, width, height);
       ctx.drawImage(img, 0, 0, width, height);
