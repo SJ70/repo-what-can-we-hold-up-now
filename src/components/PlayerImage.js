@@ -6,10 +6,12 @@ const PlayerImage = ({ player, width = 200, height = 200 }) => {
 
   useEffect(() => {
     const img = new Image();
-    img.src = player.alive 
+    
+    const imgUrl = player.alive 
       ? "/img/player/player-alive.png"
       : "/img/player/player-dead.png";
 
+    img.src = process.env.PUBLIC_URL + imgUrl;
 
     img.onload = () => {
       const canvas = canvasRef.current;

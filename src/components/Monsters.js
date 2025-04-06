@@ -25,7 +25,7 @@ function Monsters() {
       <div className='monsters-list scroll'>
         {monsters.map((monster, idx) => (
           <div className='monster' key={idx}>
-            <img src={monster.img} alt={monster.name} width={64} height={64} />
+            <img src={process.env.PUBLIC_URL + monster.img} alt={monster.name} width={64} height={64} />
             <div className='monster-info'>
             <label className='monster-name-ko'> {monster.kor_name} </label>
               <label className='monster-name-en'> {monster.name} </label>
