@@ -2,7 +2,7 @@ const MONSTERS = Object.freeze([
   {
     name : 'Animal', 
     kor_name : '짐승', 
-    img : '/public/img/monster/animal.png', 
+    img : '/img/monster/animal.png', 
     weight: 4
   },
   {
