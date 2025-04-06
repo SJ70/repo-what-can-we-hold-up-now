@@ -29,14 +29,20 @@ button {
   align-items: center;
 }
 
+input {
+  width: 100%;
+}
+
 button {
   font-weight: 300;
   color: var(--orange);
 }
-button:hover {
-  color: white;
-  filter: drop-shadow(0 0 .5em var(--orange))
-          drop-shadow(0 0 1em var(--orange));
+@media (hover: hover) and (pointer: fine) {
+  button:hover {
+    color: white;
+    filter: drop-shadow(0 0 .5em var(--orange))
+            drop-shadow(0 0 1em var(--orange));
+  }
 }
 
 * {
@@ -52,7 +58,7 @@ body {
 }
 
 .contents {
-  width: min(100vw, 60em);
+  width: min(100vw, 1024px);
   display: flex;
   flex-direction: row;
   gap: .5em;
@@ -78,6 +84,17 @@ body {
   background: var(--grey);
   border-radius: 0;
 }
-.list::-webkit-scrollbar-thumb:hover {
-  background: var(--orange);
+@media (hover: hover) and (pointer: fine) {
+  .list::-webkit-scrollbar-thumb:hover {
+    background: var(--orange);
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .contents {
+    flex-direction: column;
+  }
+
 }

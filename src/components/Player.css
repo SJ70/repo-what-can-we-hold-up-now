@@ -22,16 +22,21 @@
   align-items: center;
   position: relative;
 }
+.player-image > button {
+  filter: none;
+}
 
 .player-image > .player-image-color-picker {
   display: none;
 }
-.player-image:hover > .player-image-color-picker {
-  z-index: 10;
-  display: flex;
-  position: absolute;
-  top: 2em;
-  left: 4em;
+@media (hover: hover) and (pointer: fine) {
+  .player-image:hover > .player-image-color-picker {
+    z-index: 10;
+    display: flex;
+    position: absolute;
+    top: 2em;
+    left: 4em;
+  }
 }
 
 .player-info {
