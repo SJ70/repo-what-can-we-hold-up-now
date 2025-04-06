@@ -1,6 +1,7 @@
 import './App.css';
 import 'material-symbols'
 import Players from './components/Players';
+import Monsters from './components/Monsters';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <header className="header">
       </header>
       <Players/>
+      <Monsters/>
     </div>
   );
 }
