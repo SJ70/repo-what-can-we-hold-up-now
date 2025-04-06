@@ -71,4 +71,21 @@ export const usePlayerStore = create((set) => ({
     };
   }),
 
+  // localStorage
+  savePlayers: () => set((state) => {
+    const playersJson = JSON.stringify(state.players);
+    localStorage.setItem("players", playersJson);
+    return {
+      players: state.players,
+    };
+  }),
+
+  loadPlayers: () => set((state) => {
+    const playersJson = localStorage.getItem("players");
+    const players = playersJson ? JSON.parse(playersJson) : [];
+    return {
+      players: players,
+    };
+  }),
+
 }));
