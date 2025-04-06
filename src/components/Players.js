@@ -9,17 +9,16 @@ function Players() {
   const addPlayer = usePlayerStore((state) => state.addPlayer);
 
   return (
-    <div>
-      <div>
-        <label>
-          플레이어 수 : {players.length}
-        </label>
-        <button onClick={addPlayer}>
+    <div className='players'>
+      <div className='players-menu'>
+        <label> 플레이어 수 : </label>
+        <span> {players.length} </span>
+        <button className='player-add' onClick={addPlayer}>
           <span className="material-symbols-outlined"> add_box </span>
         </button>
       </div>
 
-      <div>
+      <div className='players-list list'>
         {players.map((player, idx) => (
           <Player key={idx} player={player} idx={idx} />
         ))}

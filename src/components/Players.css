@@ -1,0 +1,47 @@
+.players > .players-menu {
+  height: 4em;
+  padding-top: .5em;
+  margin-bottom: .5em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.players > .players-menu > label {
+  display: flex;
+  flex-direction: row;
+  gap: .5em;
+  color: var(--light-grey);
+  margin-left: 1em;
+}
+.players > .players-menu > span {
+  margin-left: .5em;
+  flex: 1;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+
+
+.players > .players-list{
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+  height: calc(100% - 5em);
+}
+
+.players > .players-list > * {
+  width: calc(100% - 1.5em);
+  margin-left: .5em;
+}
+
+.players > .players-menu > .player-add {
+  width: 4em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-right: .75em;
+}
+.players > .players-menu > .player-add > span {
+  font-size: 2em;
+}

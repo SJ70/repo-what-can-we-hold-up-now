@@ -14,29 +14,29 @@ function Player({ player, idx }) {
   const switchPlayerAlive = usePlayerStore((state) => state.switchPlayerAlive);
 
   return (
-    <div>
-      <input placeholder='플레이어 이름' value={player.name} onChange={(e) => setPlayerName(idx, e.target.value)}/>
-
-      <div style={{ backgroundColor: `rgb(${player.color.r}, ${player.color.g}, ${player.color.b})`}}> color </div>
-      <RgbColorPicker color={player.color} onChange={(color) => setPlayerColor(idx, color)} />
-
-      <PlayerImage player={player} width={100} height={100} />
-      <button onClick={() => switchPlayerAlive(idx)}>
-        <label> {player.alive ? '생존' : '사망'} </label>
-      </button>
-
-      <div>
-        <label> 힘 : {player.power} </label>
-        <div>
-        <button onClick={() => plusPlayerPower(idx)}>
-          <span className="material-symbols-outlined"> stat_1 </span>
+    <div className={`player ${player.alive ? 'alive-player' : 'dead-player'}`} >
+      <div className="overlay"></div>
+      <div className='player-image'>
+        <button onClick={() => switchPlayerAlive(idx)}>
+          <PlayerImage player={player} width={55} height={55} />
         </button>
-        <button onClick={() => minusPlayerPower(idx)}>
-          <span className="material-symbols-outlined"> stat_minus_1 </span>
+        <RgbColorPicker className='player-image-color-picker' color={player.color} onChange={(color) => setPlayerColor(idx, color)} />
+      </div>
+      <div className='player-info'>
+        <input className='player-name' placeholder='플레이어 이름' value={player.name} onChange={(e) => setPlayerName(idx, e.target.value)}/>
+        <div className='player-power'>
+          <label> 힘 : </label>
+          <span> {player.power} </span>
+          <button onClick={() => minusPlayerPower(idx)}>
+            <span className="material-symbols-outlined"> indeterminate_check_box </span>
+          </button>
+          <button onClick={() => plusPlayerPower(idx)}>
+            <span className="material-symbols-outlined"> add_box </span>
           </button>
         </div>
       </div>
-      <button onClick={() => removePlayer(idx)}>
+
+      <button className='player-remove' onClick={() => removePlayer(idx)}>
         <span className="material-symbols-outlined"> delete </span>
       </button>
     </div>

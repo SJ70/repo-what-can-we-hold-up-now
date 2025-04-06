@@ -1,3 +1,4 @@
+import './Monsters.css';
 import { usePlayerStore } from '../stores/playerStore';
 import MONSTERS from '../const/monsters';
 import { useEffect, useState } from 'react';
@@ -16,15 +17,23 @@ function Monsters() {
   }, [players]);
 
   return (
-    <div>
-      {monsters.map((monster, idx) => (
-        <div key={idx}>
-          <label> {monster.name} </label>
-          <label> {monster.kor_name} </label>
-          <img src={monster.img} alt={monster.name} width={80} height={80} />
-          <label> {monster.weight} </label>
-        </div>
-      ))}
+    <div className='monsters'>
+      <div className='monsters-count'>
+        <label> 들 수 있는 몬스터 수 : </label>
+        <span> {monsters.length} </span>
+      </div>
+      <div className='monsters-list list'>
+        {monsters.map((monster, idx) => (
+          <div className='monster' key={idx}>
+            <img src={monster.img} alt={monster.name} width={64} height={64} />
+            <div className='monster-info'>
+            <label className='monster-name-ko'> {monster.kor_name} </label>
+              <label className='monster-name-en'> {monster.name} </label>
+              <label className='monster-weight'> 무게: {monster.weight} </label>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }

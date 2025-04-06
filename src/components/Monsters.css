@@ -1,0 +1,60 @@
+.monsters > .monsters-count {
+  height: 4em;
+  padding-top: .5em;
+  margin-bottom: .5em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.monsters > .monsters-count > label {
+  display: flex;
+  flex-direction: row;
+  gap: .5em;
+  color: var(--light-grey);
+  margin-left: 1em;
+}
+.monsters > .monsters-count > span {
+  margin-left: .5em;
+  flex: 1;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.monsters > .monsters-list {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+  height: calc(100% - 5em);
+}
+
+
+.monster {
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  margin: 0 .5em 0 .5em;
+  padding: .25em;
+  height: 4em;
+}
+.monster > img {
+  object-fit: cover;
+  margin-right: .5em;
+}
+.monster > .monster-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: .25em;
+}
+.monster > .monster-info > .monster-name-ko {
+  font-weight: bold;
+}
+.monster > .monster-info > .monster-name-en {
+  color: var(--light-grey);
+  font-weight: bold;
+  font-size: .75em;
+}
+.monster > .monster-info > .monster-weight {
+  color: var(--grey);
+  font-size: .5em;
+  margin-top: .5em;
+}

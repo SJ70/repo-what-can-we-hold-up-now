@@ -1,11 +1,83 @@
-.material-symbols-outlined {
-  cursor: pointer;
+:root {
+  --orange : rgb(242, 145, 0);
+
+  --navy : rgb(20, 20, 40);
+  --dark-navy : rgb(10, 10, 20);
+
+  --light-black : rgb(27, 27, 40);
+  --dark-grey : rgb(50, 50, 50);
+  --grey : rgb(90, 90, 90);
+  --light-grey : rgb(130, 130, 130);
 }
 
-.material-symbols-outlined:hover {
-  color: red;
+button, input {
+  all: unset;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: none;
+  font: inherit;
+  line-height: normal;
+  font-size: 1em;
+}
+
+button {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+}
+
+button {
+  font-weight: 300;
+  color: var(--orange);
+}
+button:hover {
+  color: white;
+  filter: drop-shadow(0 0 .5em var(--orange))
+          drop-shadow(0 0 1em var(--orange));
 }
 
 * {
   user-select: none;
+}
+
+body {
+  background-color: var(--navy);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contents {
+  width: min(100vw, 60em);
+  display: flex;
+  flex-direction: row;
+  gap: .5em;
+}
+
+.contents > * {
+  flex: 1;
+  background-color: var(--dark-navy);
+  height: calc(100vh - .5em);
+  padding-bottom: .5em;
+}
+
+.list {
+  overflow-y: auto;
+}
+.list::-webkit-scrollbar {
+  width: .5em;
+}
+.list::-webkit-scrollbar-track {
+  background: var(--dark-grey);
+}
+.list::-webkit-scrollbar-thumb {
+  background: var(--grey);
+  border-radius: 0;
+}
+.list::-webkit-scrollbar-thumb:hover {
+  background: var(--orange);
 }
