@@ -1,0 +1,12 @@
+.palette {
+  position: relative;
+}
+
+.react-colorful {
+  width: min(300px, 100vw) !important;
+  height: min(300px, 100vh) !important;
+  background: var(--navy) !important;
+  border-radius: 0 !important;
+  overflow: hidden !important;
+  border: 1em solid var(--navy) !important;
+}

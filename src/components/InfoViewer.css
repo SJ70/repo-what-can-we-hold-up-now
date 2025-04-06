@@ -1,13 +1,3 @@
-.backdrop {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-
 .info-viewer {
   width: min(100vw, 40em);
   height: min(100vh, 40em);

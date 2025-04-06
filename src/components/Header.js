@@ -17,7 +17,7 @@ function Header() {
           <span className="material-symbols-outlined"> info </span>
         </button>
       </div>
-      {viewInfo ? <InfoViewer onClose={() => setViewInfo(false)} /> : null}
+      {viewInfo && (<InfoViewer onClose={() => setViewInfo(false)} />)}
     </header>
   )
 }
