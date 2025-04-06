@@ -19,7 +19,7 @@ function Player({ player, idx }) {
     <div className={`player ${player.alive ? 'alive-player' : 'dead-player'}`} >
       <div className="overlay"></div>
 
-      <button onClick={() => switchPlayerAlive(idx)}>
+      <button className='player-image' onClick={() => switchPlayerAlive(idx)}>
         <PlayerImage player={player} width={55} height={55} />
       </button>
 
