@@ -29,7 +29,7 @@ function Monsters() {
             <div className='monster-info'>
             <label className='monster-name-ko'> {monster.kor_name} </label>
               <label className='monster-name-en'> {monster.name} </label>
-              <label className='monster-weight'> 무게: {monster.weight} </label>
+              {/* <label className='monster-weight'> 무게: {monster.weight} </label> */}
             </div>
           </div>
         ))}
