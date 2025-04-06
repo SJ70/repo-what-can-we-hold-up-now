@@ -16,7 +16,11 @@
     "web-vitals": "^2.1.4",
     "zustand": "^5.0.3"
   },
+
+  "homepage": "https://sj70.github.io/repo-what-can-we-hold-up-now",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -39,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
