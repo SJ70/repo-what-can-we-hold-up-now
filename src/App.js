@@ -2,12 +2,12 @@ import './App.css';
 import 'material-symbols'
 import Players from './components/Players';
 import Monsters from './components/Monsters';
+import Header from './components/Header';
 
 function App() {
   return (
     <div className="App">
-      <header className="header">
-      </header>
+      <Header/>
       <div className='contents'>
         <Players/>
         <Monsters/>
