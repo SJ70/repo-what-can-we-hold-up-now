@@ -6,7 +6,7 @@ const InfoViewer = ({ onClose }) => {
   const [md, setMd] = useState('');
 
   useEffect(() => {
-    fetch('/docs/info.md')
+    fetch(process.env.PUBLIC_URL + '/docs/info.md')
       .then(res => res.text())
       .then(setMd);
   }, []);
