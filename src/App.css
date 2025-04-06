@@ -59,6 +59,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x:hidden;
 }
 
 .contents {
@@ -71,26 +72,33 @@ body {
 .contents > * {
   flex: 1;
   background-color: var(--dark-navy);
-  height: calc(100vh - 6.5em);
+  height: calc(100vh - 5.5em);
   padding-bottom: 1em;
 }
 
 .scroll {
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 .scroll::-webkit-scrollbar {
   width: .5em;
 }
 .scroll::-webkit-scrollbar-track {
-  background: var(--dark-grey);
+  background: transparent;
 }
 .scroll::-webkit-scrollbar-thumb {
-  background: var(--grey);
+  background: var(--dark-grey);
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  background-clip: content-box;
   border-radius: 0;
 }
 @media (hover: hover) and (pointer: fine) {
   .scroll::-webkit-scrollbar-thumb:hover {
     background: var(--orange);
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    background-clip: content-box;
+    border-radius: 0;
   }
 }
 
