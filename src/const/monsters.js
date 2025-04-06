@@ -114,7 +114,7 @@ const MONSTERS = Object.freeze(
       img : '/img/monster/rugrat.png', 
       weight: 4
     },
-  ].sort((a, b) => a.weight - b.weight)
+  ].sort((a, b) => b.weight - a.weight)
 );
 
 export default MONSTERS;
