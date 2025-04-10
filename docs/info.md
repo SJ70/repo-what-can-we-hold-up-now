@@ -23,7 +23,3 @@
 ### 몬스터 이미지 및 정보  
 - 출처 : Steam Commnunity  
 [https://steamcommunity.com/sharedfiles/filedetails/?id=3435277978](https://steamcommunity.com/sharedfiles/filedetails/?id=3435277978)
-
-.  
-### 업데이트
-- 2025.04.06 : 페이지 생성
