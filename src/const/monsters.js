@@ -88,7 +88,7 @@ const MONSTERS = Object.freeze(
       name : 'Spewer', 
       kor_name : '스퓨어', 
       img : '/img/monster/spewer.png', 
-      weight: 4
+      weight: 3
     },
     {
       name : 'Trudge', 
@@ -106,7 +106,7 @@ const MONSTERS = Object.freeze(
       name : 'Upscream', 
       kor_name : '업스크림', 
       img : '/img/monster/upscream.png', 
-      weight: 4
+      weight: 3
     },
     {
       name : 'Rugrat', 
