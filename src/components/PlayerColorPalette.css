@@ -5,8 +5,20 @@
 .react-colorful {
   width: min(300px, 100vw) !important;
   height: min(300px, 100vh) !important;
-  background: var(--navy) !important;
+  background: black !important;
   border-radius: 0 !important;
-  overflow: hidden !important;
-  border: 1em solid var(--navy) !important;
+  border: 1.5em solid var(--navy) !important;
+  padding: .5em;
+}
+
+.react-colorful__saturation {
+  border-radius: 0 !important;
+}
+
+.react-colorful__last-control {
+  border-radius: 0 !important;
+}
+
+.react-colorful__pointer {
+  border-radius: 0 !important;
 }
